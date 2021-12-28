@@ -4,8 +4,8 @@ app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
 
 person_dict = {
-    "1": "Иванов Сергей Иванович",
-    "2": "Петров Николай Семенович"
+    '1': 'Иванов Сергей Иванович',
+    '2': 'Петров Николай Семенович'
 }
 
 @app.route('/person/<person_id>', methods=['GET'])
@@ -16,4 +16,4 @@ def get_person(person_id):
     return jsonify({'ФИО': person})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host = '0.0.0.0', port= 8888)
