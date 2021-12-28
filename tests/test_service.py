@@ -26,7 +26,7 @@ def test_nonvalid_methods():
 
 negative_testdata = ['123',' 2', '2 ', '1 2', '-1', '0',
                     '!', '?', '#', '&', '_', '/', '//',
-                    'abc', 'абв']
+                    'abc', 'абв', '']
 
 @pytest.mark.parametrize('person_id', negative_testdata)
 def test_negative_service(person_id):
